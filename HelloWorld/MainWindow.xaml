@@ -5,9 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HelloWorld"
         mc:Ignorable="d"
+        WindowStyle="None"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock TextWrapping="Wrap" Text="HelloWorld" FontSize="75" VerticalAlignment="Center" HorizontalAlignment="Center" />
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="52*" />
+            <RowDefinition Height="52*" />
+        </Grid.RowDefinitions>
+        <local:MenuBar Grid.Row="0"/>
     </Grid>
 </Window>
